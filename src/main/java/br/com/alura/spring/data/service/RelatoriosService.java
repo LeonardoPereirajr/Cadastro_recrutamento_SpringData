@@ -13,6 +13,7 @@ import br.com.alura.spring.data.repository.FuncionarioRepository;
 public class RelatoriosService {
 
 	private Boolean system = true;
+	
 	private final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 	
 	private final FuncionarioRepository funcionarioRepository;
