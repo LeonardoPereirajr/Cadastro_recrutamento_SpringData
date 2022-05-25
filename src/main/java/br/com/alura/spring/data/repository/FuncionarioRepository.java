@@ -9,6 +9,7 @@ import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
 
 import br.com.alura.spring.data.orm.Funcionario;
+import br.com.alura.spring.data.orm.FuncionarioProjecao;
 
 /**
  * Criação do crud para trabalhar com cargo . O crudRepository deve receber o cargo e o 
@@ -29,6 +30,6 @@ public interface FuncionarioRepository extends PagingAndSortingRepository<Funcio
 			nativeQuery = true)
 	List<Funcionario> findDataContratacaoMaior(LocalDate data);
 		
-//	@Query(value = "SELECT f.id, f.nome, f.salario FROM funcionarios f", nativeQuery = true)
-//	List<FuncionarioProjecao> findFuncionarioSalario();
+	@Query(value = "SELECT f.id, f.nome, f.salario FROM funcionarios f", nativeQuery = true)
+	List<FuncionarioProjecao> findFuncionarioSalario();
 }
